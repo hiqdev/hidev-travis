@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Codeception plugin for HiDev
+ * Travis plugin for HiDev
  *
  * @link      https://github.com/hiqdev/hidev-travis
  * @package   hidev-travis
