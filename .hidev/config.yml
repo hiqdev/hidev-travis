@@ -1,0 +1,10 @@
+package:
+    name:           hidev-travis
+    namespace:      hidev\travis
+    label:          HiDev Travis
+    title:          Travis plugin for HiDev
+    type:           yii2-extension
+    keywords:       travis, hidev, plugin
+
+require:
+    hiqdev/hidev-config-php:    "*@dev"
