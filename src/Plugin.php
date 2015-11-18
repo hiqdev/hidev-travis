@@ -9,7 +9,7 @@
  * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
  */
 
-namespace hidev\travis;
+namespace hidev\travisci;
 
 class Plugin extends \hiqdev\pluginmanager\Plugin
 {
@@ -19,7 +19,7 @@ class Plugin extends \hiqdev\pluginmanager\Plugin
             '.travis.yml' => 'hidev\travis\goals\TravisYmlGoal',
         ],
         'views' => [
-            '@hidev/travis/views',
+            '@hidev/travisci/views',
         ],
     ];
 }

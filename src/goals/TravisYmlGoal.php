@@ -9,7 +9,7 @@
  * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
  */
 
-namespace hidev\travis\goals;
+namespace hidev\travisci\goals;
 
 /**
  * Goal for .travis.yml config file.
@@ -18,9 +18,9 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 {
     protected $_file = '.travis.yml';
 
-    public function actionLoad()
+    public function getTemplate()
     {
-        $this->module->runAction('travis/bootstrap');
-        parent::actionLoad();
+        return 'travisci/travis-yml.twig';
     }
+
 }
