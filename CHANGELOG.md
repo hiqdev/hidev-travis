@@ -1,8 +1,8 @@
-hiqdev/hidev-travis changelog
------------------------------
+hiqdev/hidev-travis-ci changelog
+--------------------------------
 
 ## Under development
 
 
-## Development started
+## Development started 2015-07-25
 
