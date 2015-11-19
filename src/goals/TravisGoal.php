@@ -9,62 +9,22 @@
  * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
  */
 
-namespace hidev\travis\goals;
+namespace hidev\travisci\goals;
+
+use Yii;
 
 /**
- * Goal for Travis.
+ * Goal for Travis CI.
  */
 class TravisGoal extends \hidev\goals\DefaultGoal
 {
-    public $isBuilt        = false;
-    public $isBootstrapped = false;
-
-    public function actionMake()
+    public function actionInstall()
     {
-        $this->actionLoad();
-        $this->actionConfig();
-        $this->actionBuild();
-        $this->actionRun();
+        Yii::warning('travis/install');
     }
 
-    public function actionLoad()
+    public function actionScript()
     {
-        $this->isBootstrapped = $this->config->get('.travis.yml')->exists();
-    }
-
-    public function actionConfig()
-    {
-        $this->module->runAction('.travis.yml');
-    }
-
-    public function actionRun()
-    {
-        passthru('travis run');
-    }
-
-    public function build()
-    {
-        passthru('travis build');
-    }
-
-    public function actionBuild()
-    {
-        if (!$this->isBuilt) {
-            $this->isBuilt = true;
-            $this->build();
-        }
-    }
-
-    public function bootstrap()
-    {
-        passthru('travis bootstrap');
-    }
-
-    public function actionBootstrap($force = false)
-    {
-        if (!$this->isBootstrapped || $force) {
-            $this->isBootstrapped = true;
-            $this->bootstrap();
-        }
+        Yii::warning('travis/script');
     }
 }

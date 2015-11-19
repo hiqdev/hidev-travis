@@ -18,9 +18,26 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 {
     protected $_file = '.travis.yml';
 
-    public function getTemplate()
+    protected $_items = [
+        'sudo'    => false,
+        'install' => ['hidev travis/install'],
+        'script'  => ['hidev travis/script'],
+    ];
+
+    /**
+     * Reorders config elements
+     */
+    public function actionSave()
     {
-        return 'travisci/travis-yml.twig';
+        $items = $this->_items;
+        $lang = $items['language'];
+        $lops = $items[$lang];
+        unset($items['language'], $items[$lang]);
+        $this->_items = [
+            'language' => $lang,
+            $lang      => $lops,
+        ] + $items;
+        parent::actionSave();
     }
 
 }
