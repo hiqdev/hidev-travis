@@ -41,7 +41,10 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         return '$HOME/.composer/vendor/bin';
     }
 
-    public $globalRequires = ['fxp/composer-asset-plugin:~1.1' => 1];
+    public $globalRequires = [
+        'fxp/composer-asset-plugin:~1.1' => 1,
+        'yiisoft/yii2-composer:~2.0'     => 1,
+    ];
 
     public function getGlobalRequiresString()
     {
