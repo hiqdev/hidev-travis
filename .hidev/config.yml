@@ -11,5 +11,8 @@ package:
         This plugin enables [Travis CI](https://travis-ci.org/) support for HiDev.
 
 require:
-    hiqdev/hidev-hiqdev: "*@dev"
-    hiqdev/hidev-php:    "*@dev"
+    hiqdev/hidev-php:           "*@dev"
+    hiqdev/hidev-hiqdev:        "*@dev"
+    hiqdev/hidev-travis-ci:     "*@dev"
+    hiqdev/hidev-codeception:   "*@dev"
+    hiqdev/hidev-php-cs-fixer:  "*@dev"
