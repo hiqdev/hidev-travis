@@ -11,6 +11,8 @@
 
 namespace hidev\travisci\goals;
 
+use hidev\helpers\Helper;
+
 /**
  * Goal for .travis.yml config file.
  * For the moment PHP projects only.
@@ -34,21 +36,40 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         if ($this->package->fullName == 'hiqdev/hidev') {
             return './bin';
         }
-        if ($this->config->get('composer.json')->hasRequireAny('hiqdev/hidev')) {
+        if ($this->package->hasRequireAny('hiqdev/hidev')) {
             return './vendor/bin';
         }
 
         return '$HOME/.composer/vendor/bin';
     }
 
-    public $globalRequires = [
-        'fxp/composer-asset-plugin:~1.1' => 1,
-        'yiisoft/yii2-composer:~2.0'     => 1,
-    ];
+    public function getInstallCommands()
+    {
+        $commands = [
+            'travis_retry composer self-update 1.0.0-alpha11',
+            'travis_retry composer global require "fxp/composer-asset-plugin:~1.1" "yiisoft/yii2-composer:~2.0"',
+        ];
+
+        $grs = $this->getGlobalRequiresString();
+        if ($grs) {
+            $commands[] = "travis_retry composer global require $grs";
+        }
+        return array_merge($commands, [
+            'travis_retry composer install --no-interaction',
+            $this->getBin() . '/hidev travis/install',
+        ]);
+    }
 
     public function getGlobalRequiresString()
     {
-        return '"' . implode('" "', array_keys($this->globalRequires)) . '"';
+        $req = [];
+        foreach ($this->config->install->require as $k => $v) {
+            if ($this->package->fullName == $k || $this->package->hasRequireAny($k)) {
+                continue;
+            }
+            $req[] = "\"$k:$v\"";
+        }
+        return $req ? implode(' ', $req) : '';
     }
 
     /**
@@ -58,12 +79,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
     {
         $this->setItems([
             'sudo'    => false,
-            'install' => [
-                'travis_retry composer self-update',
-                'travis_retry composer global require ' . $this->getGlobalRequiresString(),
-                'travis_retry composer install --no-interaction',
-                $this->getBin() . '/hidev travis/install',
-            ],
+            'install' => $this->getInstallCommands(),
             'script'  => [$this->getBin() . '/hidev travis/script'],
         ]);
         $items = $this->_items;
