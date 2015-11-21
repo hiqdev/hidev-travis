@@ -4,6 +4,7 @@ hiqdev/hidev-travis-ci commits history
 ## Under development
 
 - Added basics
+    - 5fbc875 2015-11-21 + build proper composer requires (sol@hiqdev.com)
     - 3723280 2015-11-20 require dev hidev modules (sol@hiqdev.com)
     - 7da138c 2015-11-20 trying travis (sol@hiqdev.com)
     - 63198ee 2015-11-19 + actual .travis.yml generation (sol@hiqdev.com)
