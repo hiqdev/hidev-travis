@@ -18,13 +18,23 @@ use Yii;
  */
 class TravisGoal extends \hidev\goals\DefaultGoal
 {
+    public $installRequest;
+    public $scriptRequest = 'build';
+
     public function actionInstall()
     {
-        Yii::warning('travis/install');
+        return $this->runRequest($this->installRequest);
     }
 
     public function actionScript()
     {
-        Yii::warning('travis/script');
+        return $this->runRequest($this->scriptRequest);
+    }
+
+    public function runRequest($request)
+    {
+        if ($request !== null) {
+            return $this->module->runRequest($request);
+        }
     }
 }
