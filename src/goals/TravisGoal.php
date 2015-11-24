@@ -18,7 +18,7 @@ use Yii;
  */
 class TravisGoal extends \hidev\goals\DefaultGoal
 {
-    public $installRequest;
+    public $installRequest = '';
     public $scriptRequest = 'build';
 
     public function actionInstall()
