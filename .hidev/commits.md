@@ -7,7 +7,7 @@ hiqdev/hidev-travis-ci commits history
 ## 0.0.2 2015-11-20
 
 - Added tests and Travis CI
-    - f60dad0 2015-11-24 + tests and travis ci (sol@hiqdev.com)
+    - f60dad0 2015-11-24 + tests and Travis CI (sol@hiqdev.com)
 - Added actual install and script actions
     - 22decc8 2015-11-24 +  to make hidev defaults (sol@hiqdev.com)
     - e390746 2015-11-23 + actual install and script actions (sol@hiqdev.com)
