@@ -4,6 +4,7 @@ hiqdev/hidev-travis-ci commits history
 ## Under development
 
 - Added actual install and script actions
+    - 22decc8 2015-11-24 +  to make hidev defaults (sol@hiqdev.com)
     - e390746 2015-11-23 + actual install and script actions (sol@hiqdev.com)
     - 5fbc875 2015-11-21 + build proper composer requires (sol@hiqdev.com)
 
