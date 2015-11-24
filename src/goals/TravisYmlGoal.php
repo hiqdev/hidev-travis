@@ -1,17 +1,15 @@
 <?php
 
 /*
- * Travis plugin for HiDev
+ * Travis CI plugin for HiDev
  *
- * @link      https://github.com/hiqdev/hidev-travis
- * @package   hidev-travis
+ * @link      https://github.com/hiqdev/hidev-travis-ci
+ * @package   hidev-travis-ci
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
 namespace hidev\travisci\goals;
-
-use hidev\helpers\Helper;
 
 /**
  * Goal for .travis.yml config file.
@@ -33,7 +31,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 
     public function detectBin()
     {
-        if ($this->package->fullName == 'hiqdev/hidev') {
+        if ($this->package->fullName === 'hiqdev/hidev') {
             return './bin';
         }
         if ($this->package->hasRequireAny('hiqdev/hidev')) {
@@ -64,7 +62,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
     {
         $req = [];
         foreach ($this->config->install->require as $k => $v) {
-            if ($this->package->fullName == $k || $this->package->hasRequireAny($k)) {
+            if ($this->package->fullName === $k || $this->package->hasRequireAny($k)) {
                 continue;
             }
             $req[] = "\"$k:$v\"";
@@ -73,7 +71,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
     }
 
     /**
-     * Reorders config elements
+     * Reorders config elements.
      */
     public function actionSave()
     {
@@ -92,5 +90,4 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         ] + $items;
         parent::actionSave();
     }
-
 }

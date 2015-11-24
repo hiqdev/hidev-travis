@@ -1,12 +1,12 @@
 <?php
 
 /*
- * Travis plugin for HiDev
+ * Travis CI plugin for HiDev
  *
- * @link      https://github.com/hiqdev/hidev-travis
- * @package   hidev-travis
+ * @link      https://github.com/hiqdev/hidev-travis-ci
+ * @package   hidev-travis-ci
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015, HiQDev (https://hiqdev.com/)
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
 namespace hidev\travisci;

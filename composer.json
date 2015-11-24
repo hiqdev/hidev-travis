@@ -43,6 +43,9 @@
             "homepage": "http://hiqdev.com/"
         }
     ],
+    "require-dev": {
+        "hiqdev/yii2-collection": "*"
+    },
     "autoload": {
         "psr-4": {
             "hidev\\travisci\\": "src"

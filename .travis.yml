@@ -1,32 +1,25 @@
 language: php
-
 php:
     - 5.4
     - 5.5
     - 5.6
-    - 7.0
+    - 7
     - hhvm
-    - hhvm-nightly
-
-# run build against hhvm but allow them to fail
-# http://docs.travis-ci.com/user/build-configuration/#Rows-That-are-Allowed-To-Fail
 matrix:
-    fast_finish: true
     allow_failures:
-        - php: hhvm
-        - php: hhvm-nightly
-        - php: 7.0
-
-# faster builds on new travis setup not using sudo
-sudo: false
-
-# cache vendor dirs
+        -
+            php: 7
+        -
+            php: hhvm
 cache:
     directories:
         - $HOME/.composer/cache
-
+sudo: false
 install:
-    - composer global require "fxp/composer-asset-plugin:~1.0" "codeception/codeception:~2.0" "fabpot/php-cs-fixer:~1.0" "hiqdev/hidev:*@dev"
-
+    - 'travis_retry composer self-update 1.0.0-alpha11'
+    - 'travis_retry composer global require "fxp/composer-asset-plugin:~1.1" "yiisoft/yii2-composer:~2.0"'
+    - 'travis_retry composer global require "hiqdev/hidev:*@dev" "codeception/codeception:*" "fabpot/php-cs-fixer:*" "phpunit/phpunit:^4.8" "phpunit/phpunit-skeleton-generator:*"'
+    - 'travis_retry composer install --no-interaction'
+    - '$HOME/.composer/vendor/bin/hidev travis/install'
 script:
-    - hidev build
+    - '$HOME/.composer/vendor/bin/hidev travis/script'
