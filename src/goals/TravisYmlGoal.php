@@ -67,6 +67,8 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
             }
             $req[] = "\"$k:$v\"";
         }
+        sort($req);
+
         return $req ? implode(' ', $req) : '';
     }
 
