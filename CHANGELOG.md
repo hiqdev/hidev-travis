@@ -3,6 +3,7 @@ hiqdev/hidev-travis-ci changelog
 
 ## Under development
 
+- Fixed tests
 
 ## 0.0.3 2015-12-14
 

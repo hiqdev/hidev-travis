@@ -3,6 +3,8 @@ hiqdev/hidev-travis-ci commits history
 
 ## Under development
 
+- Fixed tests
+    - f54ff68 2015-12-14 fixed tests (sol@hiqdev.com)
 
 ## 0.0.3 2015-12-14
 
