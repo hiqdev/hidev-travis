@@ -4,6 +4,13 @@ hiqdev/hidev-travis-ci commits history
 ## Under development
 
 
+## 0.0.3 2015-12-14
+
+- Added wget hidev.phar
+    - 0b38d77 2015-12-14 fixing build (sol@hiqdev.com)
+    - a666ee6 2015-12-14 + wget hidev.phar (sol@hiqdev.com)
+    - c79d554 2015-12-03 + sort global requires (sol@hiqdev.com)
+
 ## 0.0.2 2015-11-20
 
 - Added tests and Travis CI
