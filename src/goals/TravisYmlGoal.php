@@ -32,13 +32,13 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
     public function detectBin()
     {
         if ($this->package->fullName === 'hiqdev/hidev') {
-            return './bin';
+            return './bin/hidev';
         }
         if ($this->package->hasRequireAny('hiqdev/hidev')) {
-            return './vendor/bin';
+            return './vendor/bin/hidev';
         }
 
-        return '$HOME/.composer/vendor/bin';
+        return './hidev.phar';
     }
 
     public function getInstallCommands()
@@ -47,6 +47,9 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
             'travis_retry composer self-update 1.0.0-alpha11',
             'travis_retry composer global require "fxp/composer-asset-plugin:~1.1" "yiisoft/yii2-composer:~2.0"',
         ];
+        if ($this->bin === './hidev.phar') {
+            $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar && chmod a+x hidev.phar';
+        }
 
         $grs = $this->getGlobalRequiresString();
         if ($grs) {
@@ -54,7 +57,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         }
         return array_merge($commands, [
             'travis_retry composer install --no-interaction',
-            $this->getBin() . '/hidev travis/install',
+            $this->getBin() . ' travis/install',
         ]);
     }
 
@@ -80,7 +83,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         $this->setItems([
             'sudo'    => false,
             'install' => $this->getInstallCommands(),
-            'script'  => [$this->getBin() . '/hidev travis/script'],
+            'script'  => [$this->getBin() . ' travis/script'],
         ]);
         $items = $this->_items;
         $lang = $items['language'];
