@@ -6,7 +6,8 @@ hiqdev/hidev-travis-ci commits history
 
 ## 0.0.4 2015-12-18
 
-- Removed global require fxp asset plugin
+- Removed global require fxp asset plugin and composer fixed version
+    - b08bad2 2015-12-18 removed fxp asset plugin and composer fixed version from travis (sol@hiqdev.com)
     - 14191e1 2015-12-18 removed global require fxp plugin (sol@hiqdev.com)
 - Fixed tests
     - 3e7f0ba 2015-12-14 + require-dev yii2-pluginmanager (sol@hiqdev.com)
