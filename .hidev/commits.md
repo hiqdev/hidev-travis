@@ -3,11 +3,12 @@ hiqdev/hidev-travis-ci commits history
 
 ## Under development
 
-    - f9bd6ff 2015-12-18 + manual require fxp plugin in before_install (sol@hiqdev.com)
 
 ## 0.0.4 2015-12-18
 
 - Removed global require fxp asset plugin and composer fixed version
+    - c30294c 2015-12-18 + manual fixed composer version in before_install (sol@hiqdev.com)
+    - f9bd6ff 2015-12-18 + manual require fxp plugin in before_install (sol@hiqdev.com)
     - b08bad2 2015-12-18 removed fxp asset plugin and composer fixed version from travis (sol@hiqdev.com)
     - 14191e1 2015-12-18 removed global require fxp plugin (sol@hiqdev.com)
 - Fixed tests
