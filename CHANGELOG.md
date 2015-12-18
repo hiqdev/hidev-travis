@@ -3,6 +3,9 @@ hiqdev/hidev-travis-ci changelog
 
 ## Under development
 
+
+## 0.0.4 2015-12-18
+
 - Removed global require fxp asset plugin
 - Fixed tests
 

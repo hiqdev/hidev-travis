@@ -3,6 +3,9 @@ hiqdev/hidev-travis-ci commits history
 
 ## Under development
 
+
+## 0.0.4 2015-12-18
+
 - Removed global require fxp asset plugin
     - 14191e1 2015-12-18 removed global require fxp plugin (sol@hiqdev.com)
 - Fixed tests
