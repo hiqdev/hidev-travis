@@ -12,6 +12,8 @@ cache:
     directories:
         - $HOME/.composer/cache
 sudo: false
+before_install:
+    - 'travis_retry composer global require "fxp/composer-asset-plugin:~1.1"'
 install:
     - 'wget http://hiqdev.com/hidev/hidev.phar && chmod a+x hidev.phar'
     - 'travis_retry composer global require "codeception/codeception:*" "fabpot/php-cs-fixer:*" "phpunit/phpunit-skeleton-generator:*" "phpunit/phpunit:^4.8"'
