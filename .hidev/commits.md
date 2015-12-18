@@ -3,6 +3,7 @@ hiqdev/hidev-travis-ci commits history
 
 ## Under development
 
+    - f9bd6ff 2015-12-18 + manual require fxp plugin in before_install (sol@hiqdev.com)
 
 ## 0.0.4 2015-12-18
 
