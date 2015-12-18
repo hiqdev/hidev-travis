@@ -26,6 +26,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         if ($this->_bin === null) {
             $this->_bin = $this->detectBin();
         }
+
         return $this->_bin;
     }
 
@@ -43,10 +44,11 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 
     public function getInstallCommands()
     {
-        $commands = [
+        /*$commands = [
             'travis_retry composer self-update 1.0.0-alpha11',
-            'travis_retry composer global require "fxp/composer-asset-plugin:~1.1" "yiisoft/yii2-composer:~2.0"',
-        ];
+            'travis_retry composer global require "fxp/composer-asset-plugin:~1.1"',
+        ];*/
+        $commands = [];
         if ($this->bin === './hidev.phar') {
             $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar && chmod a+x hidev.phar';
         }
