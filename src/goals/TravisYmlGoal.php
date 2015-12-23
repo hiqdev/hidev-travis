@@ -82,11 +82,17 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
      */
     public function actionSave()
     {
-        $this->setItems([
-            'sudo'    => false,
-            'install' => $this->getInstallCommands(),
-            'script'  => [$this->getBin() . ' travis/script'],
-        ]);
+        $this->add_items = [
+            'sudo'              => false,
+        //  'before_install'    => [$this->getBin() . ' travis/before_install'],
+            'install'           => $this->getInstallCommands(),
+        ];
+        foreach (['before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
+            if ($this->getTravis()->get($event)) {
+                $add_items[$event] = [$this->getBin() . ' travis/' . $event];
+            }
+        }
+        $this->setItems($add_items);
         $items = $this->_items;
         $lang = $items['language'];
         $lops = $items[$lang];
@@ -96,5 +102,10 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
             $lang      => $lops,
         ] + $items;
         parent::actionSave();
+    }
+
+    public function getTravis()
+    {
+        return $this->getConfig()->get('travis');
     }
 }

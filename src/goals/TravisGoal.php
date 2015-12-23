@@ -16,23 +16,39 @@ namespace hidev\travisci\goals;
  */
 class TravisGoal extends \hidev\goals\DefaultGoal
 {
-    public $installRequest = '';
-    public $scriptRequest = 'build';
+    public function actionBefore_install()
+    {
+        return $this->runRequests($this->before_install);
+    }
 
     public function actionInstall()
     {
-        return $this->runRequest($this->installRequest);
+        return $this->runRequests($this->install);
+    }
+
+    public function actionBefore_script()
+    {
+        return $this->runRequests($this->before_script);
     }
 
     public function actionScript()
     {
-        return $this->runRequest($this->scriptRequest);
+        return $this->runRequests($this->script);
     }
 
-    public function runRequest($request)
+    public function actionAfter_success()
     {
-        if ($request !== null) {
-            return $this->module->runRequest($request);
-        }
+        return $this->runRequests($this->after_success);
     }
+
+    public function actionAfter_failure()
+    {
+        return $this->runRequests($this->after_failure);
+    }
+
+    public function actionAfter_script()
+    {
+        return $this->runRequests($this->after_script);
+    }
+
 }

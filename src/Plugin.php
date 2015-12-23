@@ -15,8 +15,11 @@ class Plugin extends \hiqdev\pluginmanager\Plugin
 {
     protected $_items = [
         'goals' => [
-            'travis'      => 'hidev\travisci\goals\TravisGoal',
-            'travisci'    => 'hidev\travisci\goals\TravisGoal',
+            'travis'      => [
+                'class'         => 'hidev\travisci\goals\TravisGoal',
+                'install'           => [''],
+                'script'            => ['build'],
+            ],
             '.travis.yml' => 'hidev\travisci\goals\TravisYmlGoal',
             'readme'      => [
                 'markdownBadges' => [
