@@ -50,5 +50,4 @@ class TravisGoal extends \hidev\goals\DefaultGoal
     {
         return $this->runRequests($this->after_script);
     }
-
 }
