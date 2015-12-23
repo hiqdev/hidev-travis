@@ -18,6 +18,13 @@ class Plugin extends \hiqdev\pluginmanager\Plugin
             'travis'      => 'hidev\travisci\goals\TravisGoal',
             'travisci'    => 'hidev\travisci\goals\TravisGoal',
             '.travis.yml' => 'hidev\travisci\goals\TravisYmlGoal',
+            'readme'      => [
+                'markdownBadges' => [
+                    'travis.build'    => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
+                    'travisci.build'  => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
+                    'travis-ci.build' => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
+                ],
+            ],
         ],
         'views' => [
             '@hidev/travisci/views',
