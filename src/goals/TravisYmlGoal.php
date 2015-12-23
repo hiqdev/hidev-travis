@@ -82,7 +82,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
      */
     public function actionSave()
     {
-        $this->add_items = [
+        $add_items = [
             'sudo'              => false,
         //  'before_install'    => [$this->getBin() . ' travis/before_install'],
             'install'           => $this->getInstallCommands(),
