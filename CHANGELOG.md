@@ -4,6 +4,10 @@ hiqdev/hidev-travis-ci changelog
 ## Under development
 
 
+## 0.2.1 2015-12-23
+
+- Fixed heavy typo
+
 ## 0.2.0 2015-12-23
 
 - Added more Travis actions: `before/after_install/script/success/failure`
