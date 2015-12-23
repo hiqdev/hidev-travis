@@ -3,6 +3,11 @@ hiqdev/hidev-travis-ci commits history
 
 ## Under development
 
+
+## 0.2.0 2015-12-23
+
+- Added more Travis actions: `before/after_install/script/success/failure`
+    - 824bf2d 2015-12-23 + more Travis actions: `before/after_install/script/success/failure` (sol@hiqdev.com)
 - Added `markdownBadges`
     - c119d69 2015-12-23 fixed build (sol@hiqdev.com)
     - 9a67fda 2015-12-23 + `markdownBadges` (sol@hiqdev.com)

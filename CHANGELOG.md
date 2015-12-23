@@ -3,6 +3,10 @@ hiqdev/hidev-travis-ci changelog
 
 ## Under development
 
+
+## 0.2.0 2015-12-23
+
+- Added more Travis actions: `before/after_install/script/success/failure`
 - Added `markdownBadges`
 
 ## 0.0.4 2015-12-18
