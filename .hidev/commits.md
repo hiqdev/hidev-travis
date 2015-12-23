@@ -7,7 +7,7 @@ hiqdev/hidev-travis-ci commits history
 ## 0.2.2 2015-12-23
 
 - Fixed minor issue
-    - af6548e 2015-12-23 php-cs-fixed (sol@hiqdev.com)
+    - 6fdf02b 2015-12-23 php-cs-fixed (sol@hiqdev.com)
 
 ## 0.2.1 2015-12-23
 
