@@ -4,6 +4,7 @@ hiqdev/hidev-travis-ci commits history
 ## Under development
 
 - Added `markdownBadges`
+    - c119d69 2015-12-23 fixed build (sol@hiqdev.com)
     - 9a67fda 2015-12-23 + `markdownBadges` (sol@hiqdev.com)
 
 ## 0.0.4 2015-12-18
