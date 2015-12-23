@@ -6,8 +6,11 @@ HiDev Travis CI
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/hidev-travis-ci/v/stable)](https://packagist.org/packages/hiqdev/hidev-travis-ci)
 [![Total Downloads](https://poser.pugx.org/hiqdev/hidev-travis-ci/downloads)](https://packagist.org/packages/hiqdev/hidev-travis-ci)
 [![Build Status](https://img.shields.io/travis/hiqdev/hidev-travis-ci.svg)](https://travis-ci.org/hiqdev/hidev-travis-ci)
+[![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/?branch=master)
 
 [HiDev](https://github.com/hiqdev/hidev) is a task runner, code generator and build tool for easier continuos integration.
+
 This plugin enables [Travis CI](https://travis-ci.org/) support for HiDev.
 
 ## Installation
