@@ -3,6 +3,7 @@ hiqdev/hidev-travis-ci changelog
 
 ## Under development
 
+- Added `markdownBadges`
 
 ## 0.0.4 2015-12-18
 
