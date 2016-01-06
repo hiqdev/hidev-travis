@@ -10,7 +10,7 @@
  */
 
 return [
-    'composer' => [
+    'components' => [
         'goals' => [
             'travis' => [
                 'class'   => 'hidev\travisci\goals\TravisGoal',
