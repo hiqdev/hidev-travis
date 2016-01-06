@@ -11,21 +11,23 @@
 
 return [
     'components' => [
-        'goals' => [
+        'config' => [
             'travis' => [
                 'class'   => 'hidev\travisci\goals\TravisGoal',
                 'install' => [''],
                 'script'  => ['build'],
             ],
-            '.travis.yml' => 'hidev\travisci\goals\TravisYmlGoal',
-            'readme'      => [
+            '.travis.yml' => [
+                'class' => 'hidev\travisci\goals\TravisYmlGoal',
+            ],
+            'readme' => [
                 'markdownBadges' => [
-                    'travis.build'    => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
+                    'travis.build' => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
                 ],
             ],
-        ],
-        'views' => [
-            '@hidev/travisci/views',
+            'views' => [
+                '@hidev/travisci/views',
+            ],
         ],
     ],
 ];
