@@ -65,7 +65,8 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 
     public function getGlobalRequiresString()
     {
-        $req = [];
+        return '';
+        /*$req = [];
         foreach ($this->config->install->require as $k => $v) {
             if ($this->package->fullName === $k || $this->package->hasRequireAny($k)) {
                 continue;
@@ -74,7 +75,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         }
         sort($req);
 
-        return $req ? implode(' ', $req) : '';
+        return $req ? implode(' ', $req) : '';*/
     }
 
     /**
