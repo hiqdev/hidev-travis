@@ -13,12 +13,12 @@ return [
     'components' => [
         'config' => [
             'travis' => [
-                'class'   => 'hidev\travisci\goals\TravisGoal',
+                'class'   => 'hidev\travis\controllers\TravisController',
                 'install' => [''],
                 'script'  => ['build'],
             ],
             '.travis.yml' => [
-                'class' => 'hidev\travisci\goals\TravisYmlGoal',
+                'class' => 'hidev\travis\controllers\TravisYamlController',
             ],
             'readme' => [
                 'markdownBadges' => [
@@ -26,7 +26,7 @@ return [
                 ],
             ],
             'views' => [
-                '@hidev/travisci/views',
+                '@hidev/travis/views',
             ],
         ],
     ],

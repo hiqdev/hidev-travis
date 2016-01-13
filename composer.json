@@ -1,5 +1,5 @@
 {
-    "name": "hiqdev/hidev-travis-ci",
+    "name": "hiqdev/hidev-travis",
     "type": "yii2-extension",
     "description": "Travis CI plugin for HiDev",
     "keywords": [
@@ -8,13 +8,13 @@
         "plugin",
         "continuous integration"
     ],
-    "homepage": "https://github.com/hiqdev/hidev-travis-ci",
+    "homepage": "https://github.com/hiqdev/hidev-travis",
     "license": "BSD-3-Clause",
     "support": {
         "email": "support@hiqdev.com",
-        "source": "https://github.com/hiqdev/hidev-travis-ci",
-        "issues": "https://github.com/hiqdev/hidev-travis-ci/issues",
-        "wiki": "https://github.com/hiqdev/hidev-travis-ci/wiki",
+        "source": "https://github.com/hiqdev/hidev-travis",
+        "issues": "https://github.com/hiqdev/hidev-travis/issues",
+        "wiki": "https://github.com/hiqdev/hidev-travis/wiki",
         "forum": "http://forum.hiqdev.com/"
     },
     "authors": [
@@ -44,12 +44,11 @@
         }
     ],
     "require-dev": {
-        "hiqdev/hidev": "*@dev",
-        "hiqdev/yii2-pluginmanager": "*"
+        "hiqdev/hidev": "*@dev"
     },
     "autoload": {
         "psr-4": {
-            "hidev\\travisci\\": "src"
+            "hidev\\travis\\": "src"
         }
     },
     "extra": {

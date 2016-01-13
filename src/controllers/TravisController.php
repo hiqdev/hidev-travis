@@ -9,13 +9,21 @@
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
-namespace hidev\travisci\goals;
+namespace hidev\travis\controllers;
 
 /**
  * Goal for Travis CI.
  */
-class TravisGoal extends \hidev\goals\DefaultGoal
+class TravisController extends \hidev\controllers\CommonController
 {
+    public $before_install;
+    public $install;
+    public $before_script;
+    public $script;
+    public $after_success;
+    public $after_failure;
+    public $after_script;
+
     public function actionBefore_install()
     {
         return $this->runRequests($this->before_install);

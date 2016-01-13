@@ -9,13 +9,13 @@
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
-namespace hidev\travisci\goals;
+namespace hidev\travis\controllers;
 
 /**
  * Goal for .travis.yml config file.
  * For the moment PHP projects only.
  */
-class TravisYmlGoal extends \hidev\goals\TemplateGoal
+class TravisYamlController extends \hidev\controllers\FileController
 {
     protected $_file = '.travis.yml';
 
@@ -32,10 +32,10 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
 
     public function detectBin()
     {
-        if ($this->package->fullName === 'hiqdev/hidev') {
+        if ($this->takePackage()->fullName === 'hiqdev/hidev') {
             return './bin/hidev';
         }
-        if ($this->package->hasRequireAny('hiqdev/hidev')) {
+        if ($this->takePackage()->hasRequireAny('hiqdev/hidev')) {
             return './vendor/bin/hidev';
         }
 
@@ -68,7 +68,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
         return '';
         /*$req = [];
         foreach ($this->config->install->require as $k => $v) {
-            if ($this->package->fullName === $k || $this->package->hasRequireAny($k)) {
+            if ($this->takePackage()->fullName === $k || $this->takePackage()->hasRequireAny($k)) {
                 continue;
             }
             $req[] = "\"$k:$v\"";
@@ -89,7 +89,7 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
             'install'           => $this->getInstallCommands(),
         ];
         foreach (['before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
-            if ($this->getTravis()->get($event)) {
+            if ($this->getTravis()->{$event}) {
                 $add_items[$event] = [$this->getBin() . ' travis/' . $event];
             }
         }
@@ -102,11 +102,11 @@ class TravisYmlGoal extends \hidev\goals\TemplateGoal
             'language' => $lang,
             $lang      => $lops,
         ] + $items;
-        parent::actionSave();
+        return parent::actionSave();
     }
 
     public function getTravis()
     {
-        return $this->getConfig()->get('travis');
+        return $this->takeGoal('travis');
     }
 }

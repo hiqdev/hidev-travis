@@ -1,6 +1,6 @@
 package:
-    name:           hidev-travis-ci
-    namespace:      hidev\travisci
+    name:           hidev-travis
+    namespace:      hidev\travis
     headline:       HiDev Travis CI
     title:          Travis CI plugin for HiDev
     type:           yii2-extension
@@ -14,10 +14,10 @@ package:
 require:
     hiqdev/hidev-php:           "*@dev"
     hiqdev/hidev-readme:        "*@dev"
+    hiqdev/hidev-travis:        "*@dev"
     hiqdev/hidev-vendor:        "*@dev"
     hiqdev/hidev-license:       "*@dev"
     hiqdev/hidev-phpunit:       "*@dev"
     hiqdev/hidev-composer:      "*@dev"
-    hiqdev/hidev-travis-ci:     "*@dev"
     hiqdev/hidev-scrutinizer:   "*@dev"
     hiqdev/hidev-php-cs-fixer:  "*@dev"
