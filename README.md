@@ -1,13 +1,13 @@
-HiDev Travis CI
-===============
+HiDev Travis
+============
 
 **Travis CI plugin for HiDev**
 
-[![Latest Stable Version](https://poser.pugx.org/hiqdev/hidev-travis-ci/v/stable)](https://packagist.org/packages/hiqdev/hidev-travis-ci)
-[![Total Downloads](https://poser.pugx.org/hiqdev/hidev-travis-ci/downloads)](https://packagist.org/packages/hiqdev/hidev-travis-ci)
-[![Build Status](https://img.shields.io/travis/hiqdev/hidev-travis-ci.svg)](https://travis-ci.org/hiqdev/hidev-travis-ci)
-[![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis-ci/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/hiqdev/hidev-travis/v/stable)](https://packagist.org/packages/hiqdev/hidev-travis)
+[![Total Downloads](https://poser.pugx.org/hiqdev/hidev-travis/downloads)](https://packagist.org/packages/hiqdev/hidev-travis)
+[![Build Status](https://img.shields.io/travis/hiqdev/hidev-travis.svg)](https://travis-ci.org/hiqdev/hidev-travis)
+[![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/?branch=master)
 
 [HiDev](https://github.com/hiqdev/hidev) is a task runner, code generator and build tool for easier continuos integration.
 
@@ -20,13 +20,13 @@ The preferred way to install this yii2-extension is through [composer](http://ge
 Either run
 
 ```sh
-php composer.phar require "hiqdev/hidev-travis-ci"
+php composer.phar require "hiqdev/hidev-travis"
 ```
 
 or add
 
 ```json
-"hiqdev/hidev-travis-ci": "*"
+"hiqdev/hidev-travis": "*"
 ```
 
 to the require section of your composer.json.
@@ -36,4 +36,4 @@ to the require section of your composer.json.
 This project is released under the terms of the BSD-3-Clause [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
 
-Copyright © 2015, HiQDev (http://hiqdev.com/)
+Copyright © 2015-2016, HiQDev (http://hiqdev.com/)
