@@ -1,7 +1,7 @@
 package:
     name:           hidev-travis
     namespace:      hidev\travis
-    headline:       HiDev Travis CI
+    headline:       HiDev Travis
     title:          Travis CI plugin for HiDev
     type:           yii2-extension
     keywords:       travis, hidev, plugin, continuous integration
