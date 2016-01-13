@@ -1,8 +1,10 @@
-hiqdev/hidev-travis-ci changelog
---------------------------------
+hiqdev/hidev-travis changelog
+-----------------------------
 
 ## Under development
 
+- Changed: renamed to `hidev-travis` <- `hidev-travis-ci`
+- Changed: redone with yii2-extraconfig
 
 ## 0.2.2 2015-12-23
 

@@ -1,8 +1,15 @@
-hiqdev/hidev-travis-ci commits history
---------------------------------------
+hiqdev/hidev-travis commits history
+-----------------------------------
 
 ## Under development
 
+- Changed: renamed to `hidev-travis` <- `hidev-travis-ci`
+    - 685d387 2016-01-13 finishing renaming (sol@hiqdev.com)
+    - c8cc9f0 2016-01-13 renaming to travis <- travis-ci to avoid ambiguity (sol@hiqdev.com)
+- Changed: redone with yii2-extraconfig
+    - c8a8a0f 2016-01-06 changed config structure (sol@hiqdev.com)
+    - cc68296 2016-01-06 fixed typo (sol@hiqdev.com)
+    - 4aec11c 2016-01-06 redoing with yii2-extraconfig (sol@hiqdev.com)
 
 ## 0.2.2 2015-12-23
 
