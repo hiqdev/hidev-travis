@@ -10,6 +10,7 @@ hiqdev/hidev-travis commits history
     - 685d387 2016-01-13 finishing renaming (sol@hiqdev.com)
     - c8cc9f0 2016-01-13 renaming to travis <- travis-ci to avoid ambiguity (sol@hiqdev.com)
 - Changed: redone with yii2-extraconfig
+    - 10881cd 2016-01-14 removed Plugin.php in favour of yii2-extraconfig.php (sol@hiqdev.com)
     - c8a8a0f 2016-01-06 changed config structure (sol@hiqdev.com)
     - cc68296 2016-01-06 fixed typo (sol@hiqdev.com)
     - 4aec11c 2016-01-06 redoing with yii2-extraconfig (sol@hiqdev.com)
