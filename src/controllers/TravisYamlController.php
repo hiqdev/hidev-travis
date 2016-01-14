@@ -88,7 +88,7 @@ class TravisYamlController extends \hidev\controllers\FileController
         //  'before_install'    => [$this->getBin() . ' travis/before_install'],
             'install'           => $this->getInstallCommands(),
         ];
-        foreach (['before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
+        foreach (['before_install', 'before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
             if ($this->getTravis()->{$event}) {
                 $add_items[$event] = [$this->getBin() . ' travis/' . $event];
             }
