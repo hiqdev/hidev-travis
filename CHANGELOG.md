@@ -3,7 +3,7 @@ hiqdev/hidev-travis changelog
 
 ## Under development
 
-- Added `before_install` processing
+- Removed `before_install` processing, use .travis.yml
 - Changed: renamed to `hidev-travis` <- `hidev-travis-ci`
 - Changed: redone with yii2-extraconfig
 

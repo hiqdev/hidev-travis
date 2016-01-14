@@ -3,7 +3,8 @@ hiqdev/hidev-travis commits history
 
 ## Under development
 
-- Added `before_install` processing
+- Removed `before_install` processing, use .travis.yml
+    - d9c1c34 2016-01-14 removed `before_install` processing - use .travis.yml (sol@hiqdev.com)
     - f046b5b 2016-01-14 + `before_install` processing (sol@hiqdev.com)
 - Changed: renamed to `hidev-travis` <- `hidev-travis-ci`
     - 685d387 2016-01-13 finishing renaming (sol@hiqdev.com)
