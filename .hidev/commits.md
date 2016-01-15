@@ -3,6 +3,10 @@ hiqdev/hidev-travis commits history
 
 ## Under development
 
+- Fixed tests
+    - 490419f 2016-01-15 phpcsfixed (sol@hiqdev.com)
+    - 8a5b26f 2016-01-15 + gitignore phars (sol@hiqdev.com)
+    - d3df8fb 2016-01-15 fixed tests (sol@hiqdev.com)
 - Removed `before_install` processing, use .travis.yml
     - d9c1c34 2016-01-14 removed `before_install` processing - use .travis.yml (sol@hiqdev.com)
     - f046b5b 2016-01-14 + `before_install` processing (sol@hiqdev.com)
