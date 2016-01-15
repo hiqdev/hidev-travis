@@ -1,7 +1,7 @@
 hiqdev/hidev-travis commits history
 -----------------------------------
 
-## Under development
+## 0.3.0 2016-01-15
 
 - Fixed tests
     - 490419f 2016-01-15 phpcsfixed (sol@hiqdev.com)

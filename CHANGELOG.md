@@ -1,7 +1,7 @@
 hiqdev/hidev-travis changelog
 -----------------------------
 
-## Under development
+## 0.3.0 2016-01-15
 
 - Fixed tests
 - Removed `before_install` processing, use .travis.yml
