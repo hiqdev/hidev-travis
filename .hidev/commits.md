@@ -1,6 +1,11 @@
 hiqdev/hidev-travis commits history
 -----------------------------------
 
+## Under development
+
+- Fixed `before_install` section
+    - 9fd04b8 2016-01-17 improved `before_install` section (sol@hiqdev.com)
+
 ## 0.3.0 2016-01-15
 
 - Fixed tests
