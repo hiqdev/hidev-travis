@@ -24,6 +24,16 @@ class TravisController extends \hidev\controllers\CommonController
     public $after_failure;
     public $after_script;
 
+    public function actionMake()
+    {
+        $this->runActions(['before_install', 'install']);
+        $res = $this->runActions(['before_script', 'script']);
+        $this->runAction(static::isNotOk($res) ? 'after_failure' : 'after_success');
+        $this->runAction('after_script');
+
+        return $res;
+    }
+
     public function actionBefore_install()
     {
         return $this->runRequests($this->before_install);
