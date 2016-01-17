@@ -43,7 +43,7 @@ class TravisYamlController extends \hidev\controllers\FileController
 
     public function getBeforeInstall()
     {
-        $commands = array_unique($this->get('before_install'));
+        $commands = array_values(array_unique($this->get('before_install')));
         if ($this->bin === './hidev.phar') {
             $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar -O hidev.phar && chmod a+x hidev.phar';
         }
@@ -51,6 +51,7 @@ class TravisYamlController extends \hidev\controllers\FileController
             $commands[] = 'travis_retry composer install --no-interaction';
         }
         $commands[] = $this->getBin() . ' --version';
+        $commands[] = $this->getBin() . ' travis/before_install';
 
         return $commands;
     }

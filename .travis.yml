@@ -13,9 +13,11 @@ cache:
         - $HOME/.composer/cache
 before_install:
     - 'composer self-update'
+    - 'composer --version'
+    - './vendor/bin/hidev --version'
+    - './vendor/bin/hidev travis/install'
 sudo: false
 install:
-    - 'travis_retry composer install --no-interaction'
     - './vendor/bin/hidev travis/install'
 script:
     - './vendor/bin/hidev travis/script'
