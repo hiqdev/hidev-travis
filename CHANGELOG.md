@@ -1,7 +1,7 @@
 hiqdev/hidev-travis changelog
 -----------------------------
 
-## Under development
+## 0.3.1 2016-01-17
 
 - Fixed: improved `before_install` section
 
