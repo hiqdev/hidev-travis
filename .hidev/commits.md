@@ -3,10 +3,11 @@ hiqdev/hidev-travis commits history
 
 ## Under development
 
-    - 5b3fa56 2016-01-17 improved `before_install` section (sol@hiqdev.com)
-    - 74e506a 2016-01-17 + `travis` default goal to imitate running on Travis (sol@hiqdev.com)
-- Fixed `before_install` section
+- Fixed: improved `before_install` section
+    - 776b362 2016-01-17 improved `before_install` section (sol@hiqdev.com)
+    - 2f43c7f 2016-01-17 improved `before_install` section (sol@hiqdev.com)
     - 9fd04b8 2016-01-17 improved `before_install` section (sol@hiqdev.com)
+    - 74e506a 2016-01-17 + `travis` default goal to imitate running on Travis (sol@hiqdev.com)
 
 ## 0.3.0 2016-01-15
 
