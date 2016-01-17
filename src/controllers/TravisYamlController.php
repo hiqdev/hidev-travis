@@ -13,7 +13,6 @@ namespace hidev\travis\controllers;
 
 /**
  * Goal for .travis.yml config file.
- * For the moment PHP projects only.
  */
 class TravisYamlController extends \hidev\controllers\FileController
 {
@@ -42,40 +41,18 @@ class TravisYamlController extends \hidev\controllers\FileController
         return './hidev.phar';
     }
 
-    public function getInstallCommands()
+    public function getBeforeInstall()
     {
-        /*$commands = [
-            'travis_retry composer self-update 1.0.0-alpha11',
-            'travis_retry composer global require "fxp/composer-asset-plugin:~1.1"',
-        ];*/
-        $commands = [];
+        $commands = array_unique($this->get('before_install'));
         if ($this->bin === './hidev.phar') {
-            $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar && chmod a+x hidev.phar';
+            $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar -O hidev.phar && chmod a+x hidev.phar';
         }
-
-        $grs = $this->getGlobalRequiresString();
-        if ($grs) {
-            $commands[] = "travis_retry composer global require $grs";
+        if ($this->bin === './bin/hidev') {
+            $commands[] = 'travis_retry composer install --no-interaction';
         }
-        return array_merge($commands, [
-            'travis_retry composer install --no-interaction',
-            $this->getBin() . ' travis/install',
-        ]);
-    }
+        $commands[] = $this->getBin() . ' --version';
 
-    public function getGlobalRequiresString()
-    {
-        return '';
-        /*$req = [];
-        foreach ($this->config->install->require as $k => $v) {
-            if ($this->takePackage()->fullName === $k || $this->takePackage()->hasRequireAny($k)) {
-                continue;
-            }
-            $req[] = "\"$k:$v\"";
-        }
-        sort($req);
-
-        return $req ? implode(' ', $req) : '';*/
+        return $commands;
     }
 
     /**
@@ -84,10 +61,10 @@ class TravisYamlController extends \hidev\controllers\FileController
     public function actionSave()
     {
         $add_items = [
-            'sudo'              => false,
-            'install'           => $this->getInstallCommands(),
+            'sudo'           => false,
+            'before_install' => $this->getBeforeInstall(),
         ];
-        foreach (['before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
+        foreach (['install', 'before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
             if ($this->getTravis()->{$event}) {
                 $add_items[$event] = [$this->getBin() . ' travis/' . $event];
             }
