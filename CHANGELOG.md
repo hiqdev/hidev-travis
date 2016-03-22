@@ -3,6 +3,7 @@ hiqdev/hidev-travis changelog
 
 ## 0.3.2 2016-03-22
 
+- Fixed badge with github `full_name`
 
 ## 0.3.1 2016-01-17
 

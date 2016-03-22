@@ -3,6 +3,7 @@ hiqdev/hidev-travis commits history
 
 ## 0.3.2 2016-03-22
 
+- Fixed badge with github `full_name`
     - ec053e3 2016-03-22 fixed badge with github `full_name` (sol@hiqdev.com)
 
 ## 0.3.1 2016-01-17
