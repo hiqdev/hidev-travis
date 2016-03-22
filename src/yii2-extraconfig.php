@@ -22,7 +22,7 @@ return [
             ],
             'readme' => [
                 'markdownBadges' => [
-                    'travis.build' => '[![Build Status](https://img.shields.io/travis/{{ config.github.name }}.svg)](https://travis-ci.org/{{ config.github.name }})',
+                    'travis.build' => '[![Build Status](https://img.shields.io/travis/{{ config.github.full_name }}.svg)](https://travis-ci.org/{{ config.github.full_name }})',
                 ],
             ],
             'views' => [
