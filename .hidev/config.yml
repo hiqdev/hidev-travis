@@ -1,11 +1,10 @@
 package:
-    name:           hidev-travis
-    namespace:      hidev\travis
-    headline:       HiDev Travis
-    title:          Travis CI plugin for HiDev
     type:           yii2-extension
+    name:           hidev-travis
+    title:          Travis CI plugin for HiDev
+    headline:       HiDev Travis
     keywords:       travis, hidev, plugin, continuous integration
-    year:           2015
+    namespace:      hidev\travis
     description:    |
         [HiDev](https://github.com/hiqdev/hidev) is a task runner, code generator and build tool for easier continuos integration.
 

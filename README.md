@@ -6,8 +6,8 @@ HiDev Travis
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/hidev-travis/v/stable)](https://packagist.org/packages/hiqdev/hidev-travis)
 [![Total Downloads](https://poser.pugx.org/hiqdev/hidev-travis/downloads)](https://packagist.org/packages/hiqdev/hidev-travis)
 [![Build Status](https://img.shields.io/travis/hiqdev/hidev-travis.svg)](https://travis-ci.org/hiqdev/hidev-travis)
-[![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/?branch=master)
+[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/hiqdev/hidev-travis.svg)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/hidev-travis.svg)](https://scrutinizer-ci.com/g/hiqdev/hidev-travis/)
 
 [HiDev](https://github.com/hiqdev/hidev) is a task runner, code generator and build tool for easier continuos integration.
 
