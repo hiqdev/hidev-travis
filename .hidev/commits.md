@@ -1,6 +1,11 @@
 hiqdev/hidev-travis commits history
 -----------------------------------
 
+## 0.3.3 2016-03-30
+
+- Changed `extension-config` <- `yii2-extraconfig`
+    - 9638234 2016-03-30 redoing to `extension-config` <- `yii2-extraconfig` (sol@hiqdev.com)
+
 ## 0.3.2 2016-03-22
 
 - Fixed badge with github `full_name`
