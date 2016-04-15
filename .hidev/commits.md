@@ -1,6 +1,11 @@
 hiqdev/hidev-travis commits history
 -----------------------------------
 
+## 0.3.5 2016-04-15
+
+- Fixed `hiqdev/composer-extension-plugin` version constraint
+    - 7565a3c 2016-04-15 fixed `hiqdev/composer-extension-plugin` version constraint (sol@hiqdev.com)
+
 ## 0.3.4 2016-04-14
 
 - Fixed build with asset-packagist
