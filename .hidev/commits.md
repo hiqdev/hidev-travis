@@ -1,6 +1,12 @@
 hiqdev/hidev-travis commits history
 -----------------------------------
 
+## 0.4.0 2016-05-21
+
+- Changed: redone to `composer-config-plugin`
+    - e09c223 2016-05-21 redoing to composer-config-plugin (sol@hiqdev.com)
+    - c83e225 2016-05-21 redoing to composer-config-plugin (sol@hiqdev.com)
+
 ## 0.3.5 2016-04-15
 
 - Fixed `hiqdev/composer-extension-plugin` version constraint
