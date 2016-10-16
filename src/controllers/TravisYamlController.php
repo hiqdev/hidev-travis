@@ -20,6 +20,8 @@ class TravisYamlController extends \hidev\controllers\FileController
 
     protected $_bin;
 
+    public $sudo = false;
+
     public function getBin()
     {
         if ($this->_bin === null) {
@@ -44,6 +46,13 @@ class TravisYamlController extends \hidev\controllers\FileController
     public function getBeforeInstall()
     {
         $commands = $this->get('before_install');
+        if ($this->getItem('language') != 'php') {
+            $this->sudo = true;
+            $commands[] = 'sudo add-apt-repository --yes ppa:ondrej/php';
+            $commands[] = 'sudo apt-get update';
+            $commands[] = 'sudo apt-get install php5.6-cli php5.6-mbstring';
+            $commands[] = 'env php -v';
+        }
         if ($this->bin === './hidev.phar') {
             $commands[] = 'wget http://hiqdev.com/hidev/hidev.phar -O hidev.phar && chmod a+x hidev.phar';
         } else {
@@ -78,6 +87,7 @@ class TravisYamlController extends \hidev\controllers\FileController
             'language' => $lang,
             $lang      => $lops,
         ] + $items;
+        $this->setItem('sudo', $this->sudo);
         return parent::actionSave();
     }
 
