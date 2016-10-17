@@ -69,30 +69,36 @@ class TravisYamlController extends \hidev\controllers\FileController
      */
     public function actionSave()
     {
+        $this->addActionItems();
+        $this->prependLanguageOptions();
+
+        return parent::actionSave();
+    }
+
+    public function addActionItems()
+    {
         $add_items = [
             'sudo'           => false,
             'before_install' => $this->getBeforeInstall(),
         ];
         foreach (['install', 'before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
-            if ($this->getTravis()->{$event}) {
+            if ($this->takeGoal('travis')->{$event}) {
                 $add_items[$event] = [$this->getBin() . ' travis/' . $event];
             }
         }
         $this->setItems($add_items);
-        $items = $this->_items;
-        $lang = $items['language'];
-        $lops = $items[$lang];
-        unset($items['language'], $items[$lang]);
-        $this->_items = [
-            'language' => $lang,
-            $lang      => $lops,
-        ] + $items;
-        $this->setItem('sudo', $this->sudo);
-        return parent::actionSave();
     }
 
-    public function getTravis()
+    public function prependLanguageOptions()
     {
-        return $this->takeGoal('travis');
+        $items = $this->_items;
+        $language = $items['language'] ?: $this->takePackage()->getLanguage();
+        $lang_ops = $items[$language];
+        unset($items['language'], $items[$language]);
+        $this->_items = [
+            'language' => $language,
+            $language  => $lang_ops,
+        ] + $items;
+        $this->setItem('sudo', $this->sudo);
     }
 }
