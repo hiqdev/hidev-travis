@@ -1,68 +1,84 @@
-hiqdev/hidev-travis changelog
------------------------------
+# hiqdev/hidev-travis
 
-## 0.4.0 2016-05-21
+## [Under development]
 
-- Changed: redone to `composer-config-plugin`
+## [0.4.0] - 2016-05-21
 
-## 0.3.5 2016-04-15
+- Changed: redone to `composer-config-plugin` ([sol@hiqdev.com])
 
-- Fixed `hiqdev/composer-extension-plugin` version constraint
+## [0.3.5] - 2016-04-15
 
-## 0.3.4 2016-04-14
+- Fixed `hiqdev/composer-extension-plugin` version constraint ([sol@hiqdev.com])
 
-- Fixed build with asset-packagist
-- Changed to `hidev-config` <- `extension-config`
+## [0.3.4] - 2016-04-14
 
-## 0.3.3 2016-03-30
+- Fixed build with asset-packagist ([sol@hiqdev.com])
+- Changed to `hidev-config` <- `extension-config` ([sol@hiqdev.com])
 
-- Changed `extension-config` <- `yii2-extraconfig`
+## [0.3.3] - 2016-03-30
 
-## 0.3.2 2016-03-22
+- Changed `extension-config` <- `yii2-extraconfig` ([sol@hiqdev.com])
 
-- Fixed badge with github `full_name`
+## [0.3.2] - 2016-03-22
 
-## 0.3.1 2016-01-17
+- Fixed badge with github `full_name` ([sol@hiqdev.com])
 
-- Fixed: improved `before_install` section
+## [0.3.1] - 2016-01-17
 
-## 0.3.0 2016-01-15
+- Fixed: improved `before_install` section ([sol@hiqdev.com])
 
-- Fixed tests
-- Removed `before_install` processing, use .travis.yml
-- Changed: renamed to `hidev-travis` <- `hidev-travis-ci`
-- Changed: redone with yii2-extraconfig
+## [0.3.0] - 2016-01-15
 
-## 0.2.2 2015-12-23
+- Fixed tests ([sol@hiqdev.com])
+- Removed `before_install` processing, use .travis.yml ([sol@hiqdev.com])
+- Changed: renamed to `hidev-travis` <- `hidev-travis-ci` ([sol@hiqdev.com])
+- Changed: redone with yii2-extraconfig ([sol@hiqdev.com])
 
-- Fixed minor issue
+## [0.2.2] - 2015-12-23
 
-## 0.2.1 2015-12-23
+- Fixed minor issue ([sol@hiqdev.com])
 
-- Fixed heavy typo
+## [0.2.1] - 2015-12-23
 
-## 0.2.0 2015-12-23
+- Fixed heavy typo ([sol@hiqdev.com])
 
-- Added more Travis actions: `before/after_install/script/success/failure`
-- Added `markdownBadges`
+## [0.2.0] - 2015-12-23
 
-## 0.0.4 2015-12-18
+- Added more Travis actions: `before/after_install/script/success/failure` ([sol@hiqdev.com])
+- Added `markdownBadges` ([sol@hiqdev.com])
 
-- Removed global require fxp asset plugin and composer fixed version
-- Fixed tests
+## [0.0.4] - 2015-12-18
 
-## 0.0.3 2015-12-14
+- Removed global require fxp asset plugin and composer fixed version ([sol@hiqdev.com])
+- Fixed tests ([sol@hiqdev.com])
 
-- Added wget hidev.phar
+## [0.0.3] - 2015-12-14
 
-## 0.0.2 2015-11-20
+- Added wget hidev.phar ([sol@hiqdev.com])
 
-- Added tests and Travis CI
-- Added actual install and script actions
+## [0.0.2] - 2015-11-24
 
-## 0.0.1 2015-11-20
+- Added tests and Travis CI ([sol@hiqdev.com])
+- Added actual install and script actions ([sol@hiqdev.com])
 
-- Added basics
+## [0.0.1] - 2015-11-20
 
-## Development started 2015-07-25
+- Added basics ([sol@hiqdev.com])
 
+## [Development started] - 2015-07-25
+
+[Under development]: https://github.com/hiqdev/hidev-travis/compare/0.4.0...HEAD
+[0.4.0]: https://github.com/hiqdev/hidev-travis/compare/0.3.5...0.4.0
+[0.3.5]: https://github.com/hiqdev/hidev-travis/compare/0.3.4...0.3.5
+[0.3.4]: https://github.com/hiqdev/hidev-travis/compare/0.3.3...0.3.4
+[0.3.3]: https://github.com/hiqdev/hidev-travis/compare/0.3.2...0.3.3
+[0.3.2]: https://github.com/hiqdev/hidev-travis/compare/0.3.1...0.3.2
+[0.3.1]: https://github.com/hiqdev/hidev-travis/compare/0.3.0...0.3.1
+[0.3.0]: https://github.com/hiqdev/hidev-travis/compare/0.2.2...0.3.0
+[0.2.2]: https://github.com/hiqdev/hidev-travis/compare/0.2.1...0.2.2
+[0.2.1]: https://github.com/hiqdev/hidev-travis/compare/0.2.0...0.2.1
+[0.2.0]: https://github.com/hiqdev/hidev-travis/compare/0.0.4...0.2.0
+[0.0.4]: https://github.com/hiqdev/hidev-travis/compare/0.0.3...0.0.4
+[0.0.3]: https://github.com/hiqdev/hidev-travis/compare/0.0.2...0.0.3
+[0.0.2]: https://github.com/hiqdev/hidev-travis/compare/0.0.1...0.0.2
+[0.0.1]: https://github.com/hiqdev/hidev-travis/releases/tag/0.0.1
