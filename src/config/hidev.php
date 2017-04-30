@@ -10,23 +10,33 @@
  */
 
 return [
+    'controllerMap' => [
+        'travis' => [
+            'class'   => \hidev\travis\console\TravisController::class,
+        ],
+        '.travis.yml' => [
+            'class' => \hidev\travis\console\TravisYamlController::class,
+        ],
+    ],
     'components' => [
-        'config' => [
-            'travis' => [
-                'class'   => 'hidev\travis\controllers\TravisController',
-                'install' => [''],
-                'script'  => ['build'],
+        'travis' => [
+            'class'   => \hidev\travis\components\Travis::class,
+            'install' => [''],
+            'script'  => ['build'],
+        ],
+        '.travis.yml' => [
+            'class' => \hidev\travis\components\TravisYaml::class,
+        ],
+        'readme' => [
+            'knownBadges' => [
+                'travis.build' => '[![Build Status](https://img.shields.io/travis/{{ app.github.full_name }}.svg)](https://travis-ci.org/{{ app.github.full_name }})',
             ],
-            '.travis.yml' => [
-                'class' => 'hidev\travis\controllers\TravisYamlController',
-            ],
-            'readme' => [
-                'markdownBadges' => [
-                    'travis.build' => '[![Build Status](https://img.shields.io/travis/{{ config.github.full_name }}.svg)](https://travis-ci.org/{{ config.github.full_name }})',
+        ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@hidev/views' => ['@hidev/travis/views'],
                 ],
-            ],
-            'views' => [
-                '@hidev/travis/views',
             ],
         ],
     ],

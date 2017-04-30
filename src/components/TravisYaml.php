@@ -9,12 +9,12 @@
  * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
  */
 
-namespace hidev\travis\controllers;
+namespace hidev\travis\components;
 
 /**
- * Goal for .travis.yml config file.
+ * `.travis.yml` config file.
  */
-class TravisYamlController extends \hidev\controllers\FileController
+class TravisYaml extends \hidev\components\ConfigFile
 {
     protected $_file = '.travis.yml';
 
@@ -33,10 +33,10 @@ class TravisYamlController extends \hidev\controllers\FileController
 
     public function detectBin()
     {
-        if ($this->takePackage()->fullName === 'hiqdev/hidev') {
+        if ($this->take('package')->fullName === 'hiqdev/hidev') {
             return './bin/hidev';
         }
-        if ($this->takePackage()->hasRequireAny('hiqdev/hidev')) {
+        if ($this->take('package')->hasRequireAny('hiqdev/hidev')) {
             return './vendor/bin/hidev';
         }
 
@@ -82,7 +82,7 @@ class TravisYamlController extends \hidev\controllers\FileController
             'before_install' => $this->getBeforeInstall(),
         ];
         foreach (['install', 'before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
-            if ($this->takeGoal('travis')->{$event}) {
+            if ($this->take('travis')->{$event}) {
                 $add_items[$event] = [$this->getBin() . ' travis/' . $event];
             }
         }
@@ -92,7 +92,7 @@ class TravisYamlController extends \hidev\controllers\FileController
     public function prependLanguageOptions()
     {
         $items = $this->_items;
-        $language = $items['language'] ?: $this->takePackage()->getLanguage();
+        $language = $items['language'] ?: $this->take('package')->getLanguage();
         $lang_ops = $items[$language];
         unset($items['language'], $items[$language]);
         $this->_items = [
