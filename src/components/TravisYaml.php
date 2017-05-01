@@ -14,7 +14,7 @@ namespace hidev\travis\components;
 /**
  * `.travis.yml` config file.
  */
-class TravisYaml extends \hidev\components\ConfigFile
+class TravisYaml extends \hidev\base\ConfigFile
 {
     protected $_file = '.travis.yml';
 
@@ -67,12 +67,12 @@ class TravisYaml extends \hidev\components\ConfigFile
     /**
      * Reorders config elements.
      */
-    public function actionSave()
+    public function save()
     {
         $this->addActionItems();
         $this->prependLanguageOptions();
 
-        return parent::actionSave();
+        return parent::save();
     }
 
     public function addActionItems()

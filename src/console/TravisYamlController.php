@@ -10,6 +10,6 @@ class TravisYamlController extends \hidev\base\Controller
 {
     public function actionIndex()
     {
-        $this->take('.travis.yml')->actionSave();
+        $this->take('.travis.yml')->save();
     }
 }
