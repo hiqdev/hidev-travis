@@ -1,12 +1,11 @@
 <?php
-
-/*
+/**
  * Travis CI plugin for HiDev
  *
  * @link      https://github.com/hiqdev/hidev-travis
  * @package   hidev-travis
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace hidev\travis\components;
@@ -46,7 +45,7 @@ class TravisYaml extends \hidev\base\ConfigFile
     public function getBeforeInstall()
     {
         $commands = $this->get('before_install');
-        if ($this->getItem('language') != 'php') {
+        if ($this->getItem('language') !== 'php') {
             $this->sudo = true;
             $commands[] = 'sudo add-apt-repository --yes ppa:ondrej/php';
             $commands[] = 'sudo apt-get update';
