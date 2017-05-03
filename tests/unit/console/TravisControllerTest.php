@@ -1,22 +1,21 @@
 <?php
-
-/*
+/**
  * Travis CI plugin for HiDev
  *
  * @link      https://github.com/hiqdev/hidev-travis
  * @package   hidev-travis
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
-namespace hidev\travis\tests\unit\controllers;
+namespace hidev\travis\tests\unit\console;
 
-use hidev\travis\controllers\TravisController;
+use hidev\travis\console\TravisController;
 
 /**
  * Tests for TravisController.
  */
-class TravisControllerTest extends \PHPUnit_Framework_TestCase
+class TravisControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var TravisController
@@ -34,6 +33,6 @@ class TravisControllerTest extends \PHPUnit_Framework_TestCase
 
     public function testConstructor()
     {
-        $this->assertInstanceOf('hidev\base\Controller', $this->object);
+        $this->assertInstanceOf(\hidev\base\Controller::class, $this->object);
     }
 }
