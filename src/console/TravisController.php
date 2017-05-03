@@ -16,7 +16,9 @@ namespace hidev\travis\console;
  */
 class TravisController extends \hidev\base\Controller
 {
-    public function actionIndex()
+    public $defaultAction = 'run';
+
+    public function actionRun()
     {
         $this->runActions(['before-install', 'install']);
         $res = $this->runActions(['before-script', 'script']);

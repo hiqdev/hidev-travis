@@ -59,7 +59,7 @@ class TravisYaml extends \hidev\base\ConfigFile
             $commands[] = 'composer install --no-interaction';
         }
         $commands[] = $this->getBin() . ' --version';
-        $commands[] = $this->getBin() . ' travis/before_install';
+        $commands[] = $this->getBin() . ' travis/before-install';
 
         return array_values(array_unique($commands));
     }
@@ -81,9 +81,10 @@ class TravisYaml extends \hidev\base\ConfigFile
             'sudo'           => false,
             'before_install' => $this->getBeforeInstall(),
         ];
-        foreach (['install', 'before_script', 'script', 'after_success', 'after_failure', 'after_script'] as $event) {
-            if ($this->take('travis')->{$event}) {
-                $add_items[$event] = [$this->getBin() . ' travis/' . $event];
+        foreach (['install', 'before-script', 'script', 'after-success', 'after-failure', 'after-script'] as $event) {
+            $tname = strtr($event, '-', '_');
+            if ($this->take('travis')->{$tname}) {
+                $add_items[$tname] = [$this->getBin() . ' travis/' . $event];
             }
         }
         $this->setItems($add_items);
