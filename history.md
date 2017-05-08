@@ -1,5 +1,11 @@
 # hiqdev/hidev-travis
 
+## [0.6.0.1] - 2017-05-08
+
+- Fixed function rename isResponseOk <- isNotOk
+    - [87626bf] 2017-05-08 csfixed [@hiqsol]
+    - [39bc3de] 2017-05-08 fixed isResponseOk <- isNotOk [@hiqsol]
+
 ## [0.6.0] - 2017-05-03
 
 - Redone to new hidev
@@ -191,7 +197,7 @@
 [aba4794]: https://github.com/hiqdev/hidev-travis/commit/aba4794
 [a145e72]: https://github.com/hiqdev/hidev-travis/commit/a145e72
 [dd0d81c]: https://github.com/hiqdev/hidev-travis/commit/dd0d81c
-[Under development]: https://github.com/hiqdev/hidev-travis/compare/0.4.0...HEAD
+[Under development]: https://github.com/hiqdev/hidev-travis/compare/0.6.0...HEAD
 [0.4.0]: https://github.com/hiqdev/hidev-travis/compare/0.3.5...0.4.0
 [0.3.5]: https://github.com/hiqdev/hidev-travis/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/hiqdev/hidev-travis/compare/0.3.3...0.3.4
@@ -211,3 +217,6 @@
 [2252157]: https://github.com/hiqdev/hidev-travis/commit/2252157
 [106423b]: https://github.com/hiqdev/hidev-travis/commit/106423b
 [0.6.0]: https://github.com/hiqdev/hidev-travis/compare/0.4.0...0.6.0
+[87626bf]: https://github.com/hiqdev/hidev-travis/commit/87626bf
+[39bc3de]: https://github.com/hiqdev/hidev-travis/commit/39bc3de
+[0.6.0.1]: https://github.com/hiqdev/hidev-travis/compare/0.6.0...0.6.0.1
