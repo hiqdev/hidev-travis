@@ -21,7 +21,7 @@ class TravisController extends \hidev\base\Controller
     {
         $this->runActions(['before-install', 'install']);
         $res = $this->runActions(['before-script', 'script']);
-        $this->runAction(static::isNotOk($res) ? 'after-failure' : 'after-success');
+        $this->runAction(!static::isResponseOk($res) ? 'after-failure' : 'after-success');
         $this->runAction('after-script');
 
         return $res;
