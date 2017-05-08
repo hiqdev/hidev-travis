@@ -13,7 +13,7 @@ namespace hidev\travis\components;
 /**
  * `.travis.yml` config file.
  */
-class TravisYaml extends \hidev\base\ConfigFile
+class TravisYaml extends \hidev\components\File
 {
     protected $_file = '.travis.yml';
 
