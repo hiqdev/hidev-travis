@@ -1,5 +1,10 @@
 # hiqdev/hidev-travis
 
+## [0.6.1] - 2017-05-08
+
+- Renamed `File` <- ConfigFile
+    - [970251b] 2017-05-08 renamed `File` <- ConfigFile [@hiqsol]
+
 ## [0.6.0.1] - 2017-05-08
 
 - Fixed function rename isResponseOk <- isNotOk
@@ -197,7 +202,7 @@
 [aba4794]: https://github.com/hiqdev/hidev-travis/commit/aba4794
 [a145e72]: https://github.com/hiqdev/hidev-travis/commit/a145e72
 [dd0d81c]: https://github.com/hiqdev/hidev-travis/commit/dd0d81c
-[Under development]: https://github.com/hiqdev/hidev-travis/compare/0.6.0...HEAD
+[Under development]: https://github.com/hiqdev/hidev-travis/compare/0.6.0.1...HEAD
 [0.4.0]: https://github.com/hiqdev/hidev-travis/compare/0.3.5...0.4.0
 [0.3.5]: https://github.com/hiqdev/hidev-travis/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/hiqdev/hidev-travis/compare/0.3.3...0.3.4
@@ -220,3 +225,5 @@
 [87626bf]: https://github.com/hiqdev/hidev-travis/commit/87626bf
 [39bc3de]: https://github.com/hiqdev/hidev-travis/commit/39bc3de
 [0.6.0.1]: https://github.com/hiqdev/hidev-travis/compare/0.6.0...0.6.0.1
+[970251b]: https://github.com/hiqdev/hidev-travis/commit/970251b
+[0.6.1]: https://github.com/hiqdev/hidev-travis/compare/0.6.0.1...0.6.1
