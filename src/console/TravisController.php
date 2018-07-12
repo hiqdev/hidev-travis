@@ -10,6 +10,8 @@
 
 namespace hidev\travis\console;
 
+use hidev\helpers\Helper;
+
 /**
  * Travis CI.
  */
@@ -21,7 +23,7 @@ class TravisController extends \hidev\base\Controller
     {
         $this->runActions(['before-install', 'install']);
         $res = $this->runActions(['before-script', 'script']);
-        $this->runAction(!static::isResponseOk($res) ? 'after-failure' : 'after-success');
+        $this->runAction(!Helper::isResponseOk($res) ? 'after-failure' : 'after-success');
         $this->runAction('after-script');
 
         return $res;
