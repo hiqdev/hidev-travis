@@ -1,0 +1,25 @@
+app:
+    controllerMap:
+        travis:
+            __class: hidev\travis\console\TravisController
+        .travis.yml:
+            __class: hidev\travis\console\TravisYamlController
+
+components:
+    travis:
+        __class: hidev\travis\components\Travis
+        install:
+            - ''
+        script:
+            - build
+    .travis.yml:
+        __class: hidev\travis\components\TravisYaml
+
+readme:
+    knownBadges:
+        travis.build: '[![Build Status](https://img.shields.io/travis/{{ app.github.full_name }}.svg)](https://travis-ci.org/{{ app.github.full_name }})'
+
+theme:
+    pathMap:
+        '@hidev/views':
+            - '@hidev/travis/views'
