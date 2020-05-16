@@ -39,7 +39,4 @@ return [
             ],
         ],
     ],
-    'aliases' => [
-        '@hidev/travis' => dirname(__DIR__) . '/src',
-    ],
 ];
